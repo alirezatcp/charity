@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     'charities',
     'accounts',
+    'about_us',
 ]
 
 MIDDLEWARE = [
