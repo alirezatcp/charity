@@ -7,7 +7,8 @@ from accounts.models import User
 def about_us(request):
     if request.method == 'GET':
         users = User.objects.all()
-        context = {'users': users}
+        names_list = [user.get_full_name() for user in users if user.get_full_name().strip()]
+        context = {'users': names_list}
         return render(request=request, template_name='about_us.html', context=context)
 
 
